@@ -12,7 +12,7 @@ class ItemsManager {
     var itemsList = [ScavengerHuntItem]()
     
     func archivePath() -> String? {
-        let directoryList = NSSearchPathForDirectoriesInDomains(.DocumentationDirectory, .UserDomainMask, true)
+        let directoryList = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         if let documentsPath = directoryList.first {
             return documentsPath + "/ScavengerHuntItems"
         }
