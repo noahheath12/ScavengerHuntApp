@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="riG-sA-cqv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vr0-4p-0vE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-hY-tRZ">
-                                <rect key="frame" x="30" y="30" width="540" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-hY-tRZ">
+                                <rect key="frame" x="30" y="72" width="540" height="30"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -31,13 +31,27 @@
                             <constraint firstAttribute="trailingMargin" secondItem="6s8-hY-tRZ" secondAttribute="trailing" constant="10" id="PN6-hO-664"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YSi-x7-A4L">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3sV-YG-lna">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="Pq1-rs-XyU"/>
+                                <segue destination="Vr0-4p-0vE" kind="presentation" id="mPd-tD-0kd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kFo-KV-B2x">
+                            <connections>
+                                <segue destination="Gsf-Yt-pPw" kind="unwind" identifier="DoneItem" unwindAction="unwindToList:" id="tQx-we-CPx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="myTextField" destination="6s8-hY-tRZ" id="svj-0U-BcD"/>
+                        <outlet property="myTextField" destination="6s8-hY-tRZ" id="zzx-eh-biy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Gsf-Yt-pPw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="440" y="349"/>
+            <point key="canvasLocation" x="-232" y="213"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="0th-vv-Om8">
@@ -49,7 +63,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListViewCell" textLabel="5dl-l6-0se" style="IBUITableViewCellStyleDefault" id="FUi-fO-0Q8">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FUi-fO-0Q8" id="dtt-ns-QBm">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -71,10 +85,53 @@
                             <outlet property="delegate" destination="riG-sA-cqv" id="PYl-xg-OrI"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="cst-jF-5Uy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vdQ-WU-Qoh">
+                            <connections>
+                                <segue destination="mCq-6k-xhm" kind="presentation" id="sqx-xM-2sm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fah-tY-ii5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-324" y="349"/>
+            <point key="canvasLocation" x="-38" y="863"/>
+        </scene>
+        <!--AddViewNavigationController-->
+        <scene sceneID="xn5-dl-QTV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mCq-6k-xhm" userLabel="AddViewNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZjX-yg-h1Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0nO-It-WWf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hv0-v8-Udg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="869"/>
+        </scene>
+        <!--ListViewNaviagtionController-->
+        <scene sceneID="dWR-nM-hRC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vr0-4p-0vE" userLabel="ListViewNaviagtionController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l0z-p7-kb6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="riG-sA-cqv" kind="relationship" relationship="rootViewController" id="OtO-LG-oMc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLs-ai-irf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-790" y="1175"/>
         </scene>
     </scenes>
 </document>

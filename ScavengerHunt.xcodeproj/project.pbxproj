@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181383531C8B59390064C6B5 /* ScavengerHuntItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181383521C8B59390064C6B5 /* ScavengerHuntItem.swift */; };
 		18B4409D1C8B27A500D63C71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4409C1C8B27A500D63C71 /* AppDelegate.swift */; };
 		18B4409F1C8B27A500D63C71 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4409E1C8B27A500D63C71 /* AddViewController.swift */; };
 		18B440A21C8B27A500D63C71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B440A01C8B27A500D63C71 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181383521C8B59390064C6B5 /* ScavengerHuntItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScavengerHuntItem.swift; sourceTree = "<group>"; };
 		18B440991C8B27A500D63C71 /* ScavengerHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScavengerHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B4409C1C8B27A500D63C71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B4409E1C8B27A500D63C71 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				18B4409C1C8B27A500D63C71 /* AppDelegate.swift */,
 				18B4409E1C8B27A500D63C71 /* AddViewController.swift */,
+				181383521C8B59390064C6B5 /* ScavengerHuntItem.swift */,
 				18B440A01C8B27A500D63C71 /* Main.storyboard */,
 				18B440A31C8B27A500D63C71 /* Assets.xcassets */,
 				18B440A81C8B27A500D63C71 /* Info.plist */,
@@ -258,6 +261,7 @@
 				18B4409F1C8B27A500D63C71 /* AddViewController.swift in Sources */,
 				18B4409D1C8B27A500D63C71 /* AppDelegate.swift in Sources */,
 				18B440CB1C8B380700D63C71 /* ListViewController.swift in Sources */,
+				181383531C8B59390064C6B5 /* ScavengerHuntItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +480,7 @@
 				18B440C31C8B27A500D63C71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18B440C41C8B27A500D63C71 /* Build configuration list for PBXNativeTarget "ScavengerHuntTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +489,7 @@
 				18B440C61C8B27A500D63C71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18B440C71C8B27A500D63C71 /* Build configuration list for PBXNativeTarget "ScavengerHuntUITests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +498,7 @@
 				18B440C91C8B27A500D63C71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

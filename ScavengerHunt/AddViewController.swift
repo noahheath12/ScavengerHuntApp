@@ -9,8 +9,22 @@
 import UIKit
 
 class AddViewController: UIViewController, UITextFieldDelegate {
+    var myItem = ScavengerHuntItem?()
+    @IBOutlet weak var myTextField: UITextField!
     
-    @IBOutlet var myTextField:  UITextField?;
+    @IBAction func cancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DoneItem"{
+            if let name = myTextField.text {
+                if !name.isEmpty {
+                    myItem = ScavengerHuntItem(name: name)
+                }
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
