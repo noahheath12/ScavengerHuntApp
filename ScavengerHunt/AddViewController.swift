@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AddViewController.swift
 //  ScavengerHunt
 //
 //  Created by Apple on 3/5/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class AddViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var myTextField:  UITextField?;
 
